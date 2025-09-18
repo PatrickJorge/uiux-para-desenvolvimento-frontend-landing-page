@@ -7,55 +7,101 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-text">UX/UI</span>
+                    <span class="logo-subtitle">para Front-end</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#conteudo">Conteúdo</a>
+                    <a href="#autor">Autor</a>
+                    <a href="#oferta" class="nav-cta">Garantir Agora</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-grid"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Transforme Seu <span class="gradient-text">Código</span> em <span class="gradient-text">Experiências Memoráveis</span></h1>
-                    <p class="hero-subtitle">O guia definitivo para desenvolvedores front-end que querem dominar UX/UI e se destacar no mercado</p>
+                    <div class="hero-badge">
+                        <span class="badge-icon">🚀</span>
+                        <span>Guia Definitivo para Desenvolvedores</span>
+                    </div>
+                    <h1>
+                        Transforme Seu <span class="highlight">Código</span><br>
+                        em <span class="highlight">Experiências</span><br>
+                        <span class="highlight-secondary">Memoráveis</span>
+                    </h1>
+                    <p class="hero-description">
+                        O guia completo para desenvolvedores front-end que querem dominar UX/UI 
+                        e se destacar no mercado com interfaces que realmente importam.
+                    </p>
                     
-                    <div class="hero-features">
-                        <div class="feature">
-                            <span class="icon">✅</span>
-                            <span>Aplicação prática no código</span>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Páginas de Conteúdo</span>
                         </div>
-                        <div class="feature">
-                            <span class="icon">✅</span>
-                            <span>Design Systems integrados</span>
+                        <div class="stat">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Exemplos Práticos</span>
                         </div>
-                        <div class="feature">
-                            <span class="icon">✅</span>
-                            <span>Casos reais de sucesso</span>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Aplicável no Código</span>
                         </div>
                     </div>
 
-                    <div class="price-highlight">
-                        <span class="price">R$ 19,90</span>
-                        <span class="price-text">Menos que uma pizza 🍕</span>
-                    </div>
-
-                    <button class="cta-button primary" onclick="scrollToOffer()">
-                        <span>🚀 Quero Transformar Meu Código Agora</span>
-                    </button>
-
-                    <div class="guarantee">
-                        <span class="icon">🔒</span>
-                        <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+                    <div class="hero-cta">
+                        <button class="btn-primary" onclick="scrollToOffer()">
+                            <span class="btn-text">Garantir Meu E-book</span>
+                            <span class="btn-price">R$ 19,90</span>
+                        </button>
+                        <div class="guarantee-text">
+                            <span class="guarantee-icon">🔒</span>
+                            <span>Garantia de 7 dias ou dinheiro de volta</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="hero-image">
-                    <div class="ebook-mockup">
-                        <div class="ebook-cover">
-                            <div class="cover-content">
-                                <h3>UX/UI para Front-end</h3>
-                                <p>Guia Prático</p>
-                                <div class="author">Patrick Jorge</div>
+                <div class="hero-visual">
+                    <div class="ebook-showcase">
+                        <div class="ebook-main">
+                            <div class="ebook-cover">
+                                <div class="cover-header">
+                                    <div class="cover-badge">GUIA DEFINITIVO</div>
+                                </div>
+                                <div class="cover-content">
+                                    <h3>UX/UI<br>para Front-end</h3>
+                                    <p>Transforme código em experiência</p>
+                                </div>
+                                <div class="cover-footer">
+                                    <span class="author-name">Patrick Jorge</span>
+                                </div>
                             </div>
+                        </div>
+                        <div class="ebook-floating ebook-float-1">
+                            <div class="mini-ebook">📱 Mobile First</div>
+                        </div>
+                        <div class="ebook-floating ebook-float-2">
+                            <div class="mini-ebook">🎨 Design Systems</div>
+                        </div>
+                        <div class="ebook-floating ebook-float-3">
+                            <div class="mini-ebook">⚡ Performance</div>
                         </div>
                     </div>
                 </div>
@@ -63,157 +109,297 @@
         </div>
     </section>
 
-    <!-- Learning Section -->
-    <section class="learning">
+    <!-- Features Section -->
+    <section class="features" id="sobre">
         <div class="container">
-            <h2>O que você vai aprender</h2>
-            <div class="learning-grid">
-                <div class="learning-item">
-                    <div class="icon">🎯</div>
-                    <h3>Fundamentos UX/UI</h3>
-                    <p>Aplicados especificamente ao desenvolvimento front-end</p>
-                </div>
-                <div class="learning-item">
-                    <div class="icon">👨‍💻</div>
-                    <h3>Código Centrado no Usuário</h3>
-                    <p>Como escrever código que realmente pensa na experiência</p>
-                </div>
-                <div class="learning-item">
-                    <div class="icon">🏗️</div>
-                    <h3>Arquitetura da Informação</h3>
-                    <p>Navegação intuitiva e estruturas que fazem sentido</p>
-                </div>
-                <div class="learning-item">
-                    <div class="icon">🎨</div>
-                    <h3>Design Visual</h3>
-                    <p>Tipografia, cores, acessibilidade e boas práticas</p>
-                </div>
-                <div class="learning-item">
-                    <div class="icon">🔬</div>
-                    <h3>Prototipagem e Testes</h3>
-                    <p>Evite retrabalho com validação de usabilidade</p>
-                </div>
-                <div class="learning-item">
-                    <div class="icon">⚡</div>
-                    <h3>Design Systems</h3>
-                    <p>Integração no desenvolvimento para consistência</p>
-                </div>
-                <div class="learning-item">
-                    <div class="icon">🚀</div>
-                    <h3>Tendências Futuras</h3>
-                    <p>O que vai impactar sua carreira nos próximos anos</p>
-                </div>
+            <div class="section-header">
+                <h2>Por que este e-book é diferente?</h2>
+                <p>Não é apenas teoria. É aplicação prática no seu código do dia a dia.</p>
             </div>
             
-            <div class="summary-box">
-                <p><strong>👉 Em resumo:</strong> você vai aprender a <strong>criar experiências digitais memoráveis</strong>, e não apenas "sites que funcionam".</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg">👨‍💻</div>
+                    </div>
+                    <h3>Focado em Desenvolvedores</h3>
+                    <p>Conteúdo específico para quem já programa e quer melhorar a experiência do usuário</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg">⚡</div>
+                    </div>
+                    <h3>Aplicação Imediata</h3>
+                    <p>Exemplos de código real que você pode usar nos seus projetos hoje mesmo</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg">🎯</div>
+                    </div>
+                    <h3>Resultados Práticos</h3>
+                    <p>Técnicas comprovadas que melhoram conversão e satisfação do usuário</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg">🚀</div>
+                    </div>
+                    <h3>Carreira Acelerada</h3>
+                    <p>Destaque-se no mercado com habilidades que poucos desenvolvedores dominam</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg">🏗️</div>
+                    </div>
+                    <h3>Design Systems</h3>
+                    <p>Aprenda a criar e implementar sistemas de design escaláveis</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg">📱</div>
+                    </div>
+                    <h3>Mobile First</h3>
+                    <p>Estratégias modernas para criar experiências mobile excepcionais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Preview -->
+    <section class="content-preview" id="conteudo">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que você vai aprender</h2>
+                <p>Conteúdo estruturado em módulos práticos e aplicáveis</p>
+            </div>
+
+            <div class="preview-content">
+                <div class="preview-item">
+                    <div class="preview-image">
+                        <div class="preview-mockup">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="code-line">
+                                    <span class="code-tag">&lt;section</span>
+                                    <span class="code-attr">class=</span>
+                                    <span class="code-value">"hero"</span>
+                                    <span class="code-tag">&gt;</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-comment">/* UX aplicado no CSS */</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">user-experience:</span>
+                                    <span class="code-value">optimized</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-text">
+                        <div class="preview-badge">Módulo 1</div>
+                        <h3>Fundamentos UX/UI para Desenvolvedores</h3>
+                        <ul class="preview-list">
+                            <li>Psicologia do usuário aplicada ao código</li>
+                            <li>Princípios de design que todo dev deve saber</li>
+                            <li>Como pensar em UX antes de escrever o código</li>
+                            <li>Ferramentas essenciais para o desenvolvedor</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="preview-item reverse">
+                    <div class="preview-image">
+                        <div class="preview-mockup">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="component-preview">
+                                    <div class="component-button">Button Primary</div>
+                                    <div class="component-input">Input Field</div>
+                                    <div class="component-card">Card Component</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-text">
+                        <div class="preview-badge">Módulo 2</div>
+                        <h3>Design Systems na Prática</h3>
+                        <ul class="preview-list">
+                            <li>Criando componentes reutilizáveis</li>
+                            <li>Tokens de design no CSS/JS</li>
+                            <li>Documentação que funciona</li>
+                            <li>Integração com frameworks modernos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="preview-image">
+                        <div class="preview-mockup">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="mobile-preview">
+                                    <div class="mobile-header">📱 App</div>
+                                    <div class="mobile-content">
+                                        <div class="mobile-item">Touch Target: 44px</div>
+                                        <div class="mobile-item">Thumb Zone</div>
+                                        <div class="mobile-item">Swipe Gestures</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-text">
+                        <div class="preview-badge">Módulo 3</div>
+                        <h3>Mobile First & Responsividade</h3>
+                        <ul class="preview-list">
+                            <li>Estratégias mobile-first reais</li>
+                            <li>Touch targets e gestos</li>
+                            <li>Performance em dispositivos móveis</li>
+                            <li>Progressive Web Apps (PWA)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Páginas de Conteúdo Prático</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Exemplos de Código Real</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Projetos Completos</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Author Section -->
-    <section class="author">
+    <section class="author-section" id="autor">
         <div class="container">
             <div class="author-content">
                 <div class="author-image">
-                    <div class="avatar">
+                    <div class="author-avatar">
                         <span>PJ</span>
+                    </div>
+                    <div class="author-badge">
+                        <span>✨ Desenvolvedor Fullstack</span>
                     </div>
                 </div>
                 <div class="author-text">
-                    <h2>👨‍💻 Patrick Jorge</h2>
-                    <h3>Desenvolvedor Fullstack</h3>
-                    <ul class="author-credentials">
-                        <li>✅ Mais de uma década de experiência em projetos digitais</li>
-                        <li>✅ Atuando em startups e soluções sob medida para empresas</li>
-                        <li>✅ Apaixonado por unir tecnologia e experiência do usuário</li>
-                        <li>✅ Criador de conteúdos práticos para devs que querem ir além do "código que roda"</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof -->
-    <section class="social-proof">
-        <div class="container">
-            <h2>💡 Profissionais que dominam UX/UI:</h2>
-            <div class="proof-grid">
-                <div class="proof-item">
-                    <div class="icon">📈</div>
-                    <h3>Entregam produtos mais valiosos</h3>
-                    <p>Soluções que realmente resolvem problemas dos usuários</p>
-                </div>
-                <div class="proof-item">
-                    <div class="icon">⭐</div>
-                    <h3>São mais reconhecidos no mercado</h3>
-                    <p>Destaque natural entre outros desenvolvedores</p>
-                </div>
-                <div class="proof-item">
-                    <div class="icon">💰</div>
-                    <h3>Conseguem remuneração maior</h3>
-                    <p>E oportunidades melhores de carreira</p>
-                </div>
-            </div>
-            <p class="proof-note">(Esta seção futuramente receberá depoimentos de compradores)</p>
-        </div>
-    </section>
-
-    <!-- Bonus Section -->
-    <section class="bonus">
-        <div class="container">
-            <h2>🎁 Bônus Exclusivos</h2>
-            <div class="bonus-grid">
-                <div class="bonus-item">
-                    <div class="icon">📋</div>
-                    <h3>Checklists Práticos</h3>
-                    <p>Listas de verificação para aplicar UX/UI em seus projetos</p>
-                </div>
-                <div class="bonus-item">
-                    <div class="icon">💻</div>
-                    <h3>Exemplos Reais de Código</h3>
-                    <p>Código comentado aplicando os conceitos na prática</p>
-                </div>
-                <div class="bonus-item">
-                    <div class="icon">🗺️</div>
-                    <h3>Plano de Ação</h3>
-                    <p>Roteiro sugerido para aplicar capítulo por capítulo</p>
+                    <h2>Patrick Jorge</h2>
+                    <h3>Desenvolvedor Fullstack & UX Enthusiast</h3>
+                    <p class="author-description">
+                        Com mais de uma década criando experiências digitais, Patrick combina 
+                        expertise técnica com design centrado no usuário. Trabalhou em startups 
+                        e grandes empresas, sempre focado em unir código eficiente com experiências memoráveis.
+                    </p>
+                    <div class="author-credentials">
+                        <div class="credential">
+                            <span class="credential-icon">🚀</span>
+                            <span>10+ anos desenvolvendo interfaces</span>
+                        </div>
+                        <div class="credential">
+                            <span class="credential-icon">💼</span>
+                            <span>Projetos para startups e empresas</span>
+                        </div>
+                        <div class="credential">
+                            <span class="credential-icon">🎯</span>
+                            <span>Especialista em UX para desenvolvedores</span>
+                        </div>
+                        <div class="credential">
+                            <span class="credential-icon">📚</span>
+                            <span>Criador de conteúdo técnico</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Offer Section -->
-    <section class="offer" id="offer">
+    <section class="offer-section" id="oferta">
         <div class="container">
-            <div class="offer-box">
-                <h2>📌 Oferta Especial</h2>
-                <div class="price-section">
-                    <div class="main-price">
-                        <span class="currency">R$</span>
-                        <span class="amount">19,90</span>
-                    </div>
-                    <p class="price-description">Isso mesmo — menos que o valor de uma pizza 🍕</p>
-                    <p class="investment-text">Um investimento pequeno para um retorno <strong>enorme</strong> na sua carreira.</p>
+            <div class="offer-content">
+                <div class="offer-header">
+                    <h2>Transforme sua carreira hoje</h2>
+                    <p>Investimento que se paga no primeiro projeto</p>
                 </div>
 
-                <div class="delivery-info">
-                    <div class="icon">⚡</div>
-                    <div>
-                        <h3>Entrega Imediata</h3>
-                        <p>Após a compra, você recebe o download direto no seu e-mail.</p>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-badge">Oferta Especial</div>
+                        <div class="pricing-value">
+                            <span class="currency">R$</span>
+                            <span class="amount">19</span>
+                            <span class="cents">,90</span>
+                        </div>
+                        <div class="pricing-description">Menos que uma pizza 🍕</div>
                     </div>
-                </div>
 
-                <button class="cta-button primary large">
-                    <span>🚀 Quero meu e-book agora por R$ 19,90</span>
-                </button>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <span class="feature-check">✅</span>
+                            <span>E-book completo (150+ páginas)</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-check">✅</span>
+                            <span>25+ exemplos de código prático</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-check">✅</span>
+                            <span>Checklists para seus projetos</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-check">✅</span>
+                            <span>Templates de componentes</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-check">✅</span>
+                            <span>Acesso imediato após compra</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-check">✅</span>
+                            <span>Garantia de 7 dias</span>
+                        </div>
+                    </div>
 
-                <div class="guarantee-section">
-                    <div class="icon">🔒</div>
-                    <div>
-                        <h3>Risco Zero - Garantia de 7 dias</h3>
-                        <p>Se você sentir que o material não agregou valor, devolvemos 100% do seu investimento.</p>
+                    <button class="btn-purchase">
+                        <span class="btn-icon">🚀</span>
+                        <span>Garantir Meu E-book Agora</span>
+                    </button>
+
+                    <div class="guarantee-section">
+                        <div class="guarantee-icon">🔒</div>
+                        <div class="guarantee-text">
+                            <strong>Garantia de 7 dias</strong><br>
+                            Se não ficar satisfeito, devolvemos 100% do seu dinheiro
+                        </div>
                     </div>
                 </div>
             </div>
@@ -223,23 +409,19 @@
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>🚀 Não Seja Mais um "Dev Comum"</h2>
-            <p class="final-text">
-                Já são centenas de devs buscando se diferenciar no mercado. A diferença entre o "dev comum" e o <strong>dev valorizado</strong> está aqui: <strong>no jeito que você transforma código em experiência</strong>.
-            </p>
-            <p class="urgency-text">👉 Não espere mais. Garanta agora seu acesso:</p>
-            
-            <button class="cta-button primary large pulse">
-                <span>🔗 Quero meu e-book agora por R$ 19,90</span>
-            </button>
-
-            <div class="final-guarantee">
-                <span class="icon">🔒</span>
-                <span>Garantia de 7 dias • Entrega imediata • Suporte completo</span>
+            <div class="cta-content">
+                <h2>Não seja mais um "dev comum"</h2>
+                <p>
+                    A diferença entre o desenvolvedor comum e o desenvolvedor valorizado 
+                    está na capacidade de criar experiências que realmente importam.
+                </p>
+                <button class="btn-final-cta" onclick="scrollToOffer()">
+                    <span>🔥 Quero me destacar agora</span>
+                </button>
             </div>
         </div>
     </section>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
