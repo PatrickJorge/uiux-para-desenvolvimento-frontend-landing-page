@@ -1,7 +1,7 @@
 // Smooth scrolling function
 function scrollToOffer() {
     const offerSection = document.getElementById('offer');
-    offerSection.scrollIntoView({ 
+    offerSection.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     });
@@ -23,10 +23,10 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Initialize animations on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Animate elements on scroll
     const animatedElements = document.querySelectorAll('.learning-item, .proof-item, .bonus-item, .author-content');
-    
+
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -71,13 +71,13 @@ function animateCounter() {
 function addParallaxEffect() {
     const hero = document.querySelector('.hero');
     const ebookMockup = document.querySelector('.ebook-mockup');
-    
+
     if (!hero || !ebookMockup) return;
 
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const rate = scrolled * -0.5;
-        
+
         if (scrolled < window.innerHeight) {
             ebookMockup.style.transform = `translateY(${rate}px) rotateY(-15deg) rotateX(5deg)`;
         }
@@ -87,20 +87,20 @@ function addParallaxEffect() {
 // CTA button tracking and effects
 function addCTATracking() {
     const ctaButtons = document.querySelectorAll('.cta-button');
-    
+
     ctaButtons.forEach(button => {
         // Add ripple effect
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             // Create ripple element
             const ripple = document.createElement('span');
             ripple.classList.add('ripple');
-            
+
             // Calculate position
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
+
             // Style ripple
             ripple.style.cssText = `
                 position: absolute;
@@ -114,25 +114,25 @@ function addCTATracking() {
                 animation: ripple-animation 0.6s ease-out;
                 pointer-events: none;
             `;
-            
+
             // Add to button
             this.appendChild(ripple);
-            
+
             // Remove after animation
             setTimeout(() => {
                 ripple.remove();
             }, 600);
-            
+
             // Analytics tracking (placeholder)
             trackCTAClick(this.textContent);
         });
 
         // Hover effects
-        button.addEventListener('mouseenter', function() {
+        button.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-3px) scale(1.02)';
         });
 
-        button.addEventListener('mouseleave', function() {
+        button.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
@@ -183,7 +183,7 @@ function addScrollProgress() {
 // Placeholder for analytics tracking
 function trackCTAClick(buttonText) {
     console.log(`CTA clicked: ${buttonText}`);
-    
+
     // Here you would integrate with your analytics service
     // Example: gtag('event', 'click', { 'event_category': 'CTA', 'event_label': buttonText });
     // or: fbq('track', 'Lead', { content_name: buttonText });
@@ -235,65 +235,33 @@ document.addEventListener('DOMContentLoaded', addFloatingElements);
 
 // Add testimonial carousel functionality (for future use)
 function initTestimonialCarousel() {
-    const testimonialSection = document.querySelector('.social-proof');
-    if (!testimonialSection) return;
-
-    // Placeholder for testimonial carousel
-    // This can be expanded when real testimonials are added
-    console.log('Testimonial carousel ready for implementation');
-}
-
-// Scroll-triggered animations for learning items
-function initScrollAnimations() {
-    const learningItems = document.querySelectorAll('.learning-item');
-    
-    learningItems.forEach((item, index) => {
-        item.style.animationDelay = `${index * 0.1}s`;
-    });
-}
-
-// Add exit-intent popup functionality
-function addExitIntentPopup() {
-    let exitIntentShown = false;
-
-    document.addEventListener('mouseleave', (e) => {
-        if (e.clientY <= 0 && !exitIntentShown) {
-            exitIntentShown = true;
-            showExitIntentPopup();
-        }
-    });
-}
-
-function showExitIntentPopup() {
-    // Create modal backdrop
+    // Create modal backdrop (uses CSS classes for consistent styling)
     const backdrop = document.createElement('div');
-    backdrop.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        animation: fadeIn 0.3s ease-out;
-    `;
+    backdrop.classList.add('exit-backdrop');
 
-    // Create popup content
+    // Create popup content (use classes, not inline styles)
     const popup = document.createElement('div');
-    popup.style.cssText = `
-        background: white;
-        padding: 40px;
-        border-radius: 20px;
-        max-width: 500px;
-        width: 90%;
-        text-align: center;
-        position: relative;
-        animation: slideUp 0.4s ease-out;
+    popup.classList.add('exit-popup');
+
+    popup.innerHTML = `
+        <h3 class="exit-title">Espera! Não perca essa oportunidade! 🚀</h3>
+        <p class="exit-desc">Você está a um clique de transformar sua carreira como desenvolvedor front-end.</p>
+        <div class="exit-offer"><strong>Oferta especial: R$ 19,90</strong></div>
+        <div class="exit-actions">
+            <button class="exit-cta exit-cta-primary">Garantir Agora</button>
+            <button class="exit-cta exit-cta-ghost">Fechar</button>
+        </div>
     `;
 
+    // Close behavior for buttons (event delegation)
+    +    popup.querySelectorAll('.exit-cta').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (backdrop.parentElement) backdrop.remove();
+        });
+    });
+
+    backdrop.appendChild(popup);
+    document.body.appendChild(backdrop);
     popup.innerHTML = `
         <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: #1e293b;">Espera! Não perca essa oportunidade! 🚀</h3>
         <p style="font-size: 1.1rem; margin-bottom: 25px; color: #64748b;">
@@ -326,23 +294,7 @@ function showExitIntentPopup() {
     document.body.appendChild(backdrop);
 
     // Add animations
-    const animationCSS = `
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    `;
-    
-    if (!document.querySelector('#exit-intent-css')) {
-        const exitStyle = document.createElement('style');
-        exitStyle.id = 'exit-intent-css';
-        exitStyle.textContent = animationCSS;
-        document.head.appendChild(exitStyle);
-    }
+    // animations (kept minimal here; styles live in CSS file)
 
     // Remove popup after 10 seconds
     setTimeout(() => {
@@ -360,15 +312,15 @@ setTimeout(() => {
 // Add FAQ accordion functionality (for future expansion)
 function initFAQAccordion() {
     const faqItems = document.querySelectorAll('.faq-item');
-    
+
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
-        
+
         if (question && answer) {
             question.addEventListener('click', () => {
                 const isOpen = answer.style.display === 'block';
-                
+
                 // Close all other answers
                 faqItems.forEach(otherItem => {
                     const otherAnswer = otherItem.querySelector('.faq-answer');
@@ -376,7 +328,7 @@ function initFAQAccordion() {
                         otherAnswer.style.display = 'none';
                     }
                 });
-                
+
                 // Toggle current answer
                 answer.style.display = isOpen ? 'none' : 'block';
             });
@@ -387,17 +339,17 @@ function initFAQAccordion() {
 // Add social share functionality
 function addSocialShare() {
     const shareButtons = document.querySelectorAll('.share-button');
-    
+
     shareButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.preventDefault();
             const platform = this.dataset.platform;
             const url = encodeURIComponent(window.location.href);
             const text = encodeURIComponent('Transforme seu código em experiências memoráveis! 🚀');
-            
+
             let shareUrl = '';
-            
-            switch(platform) {
+
+            switch (platform) {
                 case 'facebook':
                     shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
                     break;
@@ -411,7 +363,7 @@ function addSocialShare() {
                     shareUrl = `https://wa.me/?text=${text} ${url}`;
                     break;
             }
-            
+
             if (shareUrl) {
                 window.open(shareUrl, '_blank', 'width=600,height=400');
             }
@@ -420,10 +372,10 @@ function addSocialShare() {
 }
 
 // Initialize all functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initScrollAnimations();
     initTestimonialCarousel();
     addSocialShare();
-    
+
     console.log('Landing page initialized successfully! 🚀');
 });

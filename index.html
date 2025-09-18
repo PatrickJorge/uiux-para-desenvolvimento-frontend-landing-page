@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <span class="logo-text">UX/UI</span>
-                    <span class="logo-subtitle">para Front-end</span>
-                </div>
-                <div class="nav-links">
-                    <a href="#sobre">Sobre o E-book</a>
-                    <a href="#conteudo">Conteúdo</a>
-                    <a href="#autor">Autor</a>
-                    <a href="#oferta" class="nav-cta">Garantir Agora</a>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
+<body>
     <section class="hero">
         <div class="hero-background">
             <div class="hero-particles"></div>
@@ -38,7 +22,6 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="hero-badge">
-                        <span class="badge-icon">🚀</span>
                         <span>Guia Definitivo para Desenvolvedores</span>
                     </div>
                     <h1>
@@ -47,36 +30,26 @@
                         <span class="highlight-secondary">Memoráveis</span>
                     </h1>
                     <p class="hero-description">
-                        O guia completo para desenvolvedores front-end que querem dominar UX/UI 
+                        O guia completo para desenvolvedores front-end que querem dominar UX/UI
                         e se destacar no mercado com interfaces que realmente importam.
                     </p>
-                    
+
                     <div class="hero-cta">
                         <button class="btn-primary" onclick="scrollToOffer()">
                             <span class="btn-text">Garantir Meu E-book</span>
                             <span class="btn-price">R$ 19,90</span>
                         </button>
-                        <div class="guarantee-text">
-                            <span class="guarantee-icon">🔒</span>
-                            <span>Garantia de 7 dias ou dinheiro de volta</span>
-                        </div>
                     </div>
                 </div>
 
                 <div class="hero-visual">
-                    <div class="ebook-showcase">
+                    <!-- adicionada a classe `ebook-mockup` para manter compatibilidade com o script de paralaxe -->
+                    <div class="ebook-showcase ebook-mockup">
                         <div class="ebook-main">
                             <div class="ebook-cover">
-                                <div class="cover-header">
-                                    <div class="cover-badge">GUIA DEFINITIVO</div>
-                                </div>
-                                <div class="cover-content">
-                                    <h3>UX/UI<br>para Front-end</h3>
-                                    <p>Transforme código em experiência</p>
-                                </div>
-                                <div class="cover-footer">
-                                    <span class="author-name">Patrick Jorge</span>
-                                </div>
+                                <!-- imagem do e-book vinda da pasta assets -->
+                                <img class="ebook-image" src="assets/ebook-image.png"
+                                    alt="Capa do e-book UX/UI para Front-end">
                             </div>
                         </div>
                     </div>
@@ -92,7 +65,7 @@
                 <h2>O que você vai dominar</h2>
                 <p>Habilidades essenciais para se destacar como desenvolvedor front-end</p>
             </div>
-            
+
             <div class="services-container">
                 <div class="service-card">
                     <div class="service-icon">
@@ -101,9 +74,10 @@
                         </div>
                     </div>
                     <h3>Design Systems</h3>
-                    <p>Aprenda a criar e implementar sistemas de design escaláveis que mantêm consistência em todos os projetos.</p>
+                    <p>Aprenda a criar e implementar sistemas de design escaláveis que mantêm consistência em todos os
+                        projetos.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <div class="icon-wrapper">
@@ -113,7 +87,7 @@
                     <h3>Mobile First</h3>
                     <p>Domine estratégias modernas para criar experiências mobile excepcionais que convertem.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <div class="icon-wrapper">
@@ -123,7 +97,7 @@
                     <h3>Performance UX</h3>
                     <p>Otimize a experiência do usuário através de código eficiente e carregamento inteligente.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <div class="icon-wrapper">
@@ -133,7 +107,7 @@
                     <h3>Psicologia do Usuário</h3>
                     <p>Entenda como os usuários pensam e aplique esses insights diretamente no seu código.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <div class="icon-wrapper">
@@ -143,7 +117,7 @@
                     <h3>Ferramentas Modernas</h3>
                     <p>Domine as ferramentas essenciais que todo desenvolvedor UX-focused precisa conhecer.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <div class="icon-wrapper">
@@ -279,7 +253,8 @@
                     </div>
                     <div class="timeline-content">
                         <h3>Fundamentos Sólidos</h3>
-                        <p>Comece entendendo os princípios básicos de UX/UI e como aplicá-los no desenvolvimento front-end.</p>
+                        <p>Comece entendendo os princípios básicos de UX/UI e como aplicá-los no desenvolvimento
+                            front-end.</p>
                     </div>
                 </div>
 
@@ -289,7 +264,8 @@
                     </div>
                     <div class="timeline-content">
                         <h3>Ferramentas & Metodologias</h3>
-                        <p>Domine as ferramentas essenciais e metodologias que aceleram o desenvolvimento focado em UX.</p>
+                        <p>Domine as ferramentas essenciais e metodologias que aceleram o desenvolvimento focado em UX.
+                        </p>
                     </div>
                 </div>
 
@@ -331,8 +307,8 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">150+</div>
-                    <div class="stat-label">Páginas de Conteúdo</div>
+                    <div class="stat-number">+40</div>
+                    <div class="stat-label">Páginas</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">25+</div>
@@ -346,35 +322,37 @@
         </div>
     </section>
 
-    <!-- Author Section -->
+    <!-- Author Section (CueTech) -->
     <section class="author-section" id="autor">
         <div class="container">
             <div class="author-content">
                 <div class="author-image">
                     <div class="author-avatar">
-                        <span>PJ</span>
+                        <img class="logo-cuetech-3d" src="./assets/logo-cuetech-3d.png" alt="logo-cuetech-3d">
                     </div>
                 </div>
                 <div class="author-text">
-                    <div class="author-badge">Desenvolvedor Fullstack & UX Expert</div>
-                    <h2>Patrick Jorge</h2>
+                    <div class="author-badge">Empresa de Software & Soluções Sob Medida</div>
+                    <h2>CueTech</h2>
                     <p class="author-description">
-                        Com mais de uma década criando experiências digitais, Patrick combina 
-                        expertise técnica com design centrado no usuário. Trabalhou em startups 
-                        e grandes empresas, sempre focado em unir código eficiente com experiências memoráveis.
+                        A CueTech é uma empresa de software que desenvolve sistemas completos e escaláveis sob
+                        medida. Com anos de atuação e entregas para clientes em diferentes setores, nossa equipe
+                        acumulou uma jornada prática repleta de aprendizados em situações reais do dia a dia.
+                        Este e-book foi escrito a partir dessas experiências: cases, decisões técnicas e
+                        processos que usamos ao projetar soluções que realmente funcionam para os clientes.
                     </p>
                     <div class="author-credentials">
                         <div class="credential">
                             <span class="credential-icon">🚀</span>
-                            <span>10+ anos desenvolvendo interfaces</span>
+                            <span>Sistemas completos e escaláveis sob medida</span>
                         </div>
                         <div class="credential">
-                            <span class="credential-icon">💼</span>
-                            <span>Projetos para startups e empresas</span>
+                            <span class="credential-icon">🧩</span>
+                            <span>Casos reais aplicados em projetos de clientes</span>
                         </div>
                         <div class="credential">
-                            <span class="credential-icon">🎯</span>
-                            <span>Especialista em UX para desenvolvedores</span>
+                            <span class="credential-icon">�</span>
+                            <span>Equipe de especialistas em arquitetura e UX para produtos</span>
                         </div>
                     </div>
                 </div>
@@ -397,7 +375,6 @@
                         <div class="pricing-value">
                             <span class="currency">R$</span>
                             <span class="amount">19</span>
-                            <span class="cents">,90</span>
                         </div>
                         <div class="pricing-description">Menos que uma pizza 🍕</div>
                     </div>
@@ -405,7 +382,7 @@
                     <div class="pricing-features">
                         <div class="feature">
                             <span class="feature-check">✅</span>
-                            <span>E-book completo (150+ páginas)</span>
+                            <span>E-book completo (40+ páginas)</span>
                         </div>
                         <div class="feature">
                             <span class="feature-check">✅</span>
@@ -430,17 +407,8 @@
                     </div>
 
                     <button class="btn-purchase">
-                        <span class="btn-icon">🚀</span>
                         <span>Garantir Meu E-book Agora</span>
                     </button>
-
-                    <div class="guarantee-section">
-                        <div class="guarantee-icon">🔒</div>
-                        <div class="guarantee-text">
-                            <strong>Garantia de 7 dias</strong><br>
-                            Se não ficar satisfeito, devolvemos 100% do seu dinheiro
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -452,11 +420,11 @@
             <div class="cta-content">
                 <h2>Não seja mais um "dev comum"</h2>
                 <p>
-                    A diferença entre o desenvolvedor comum e o desenvolvedor valorizado 
+                    A diferença entre o desenvolvedor comum e o desenvolvedor valorizado
                     está na capacidade de criar experiências que realmente importam.
                 </p>
                 <button class="btn-final-cta" onclick="scrollToOffer()">
-                    <span>🔥 Quero me destacar agora</span>
+                    <span>Quero me destacar agora</span>
                 </button>
             </div>
         </div>
@@ -464,4 +432,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
